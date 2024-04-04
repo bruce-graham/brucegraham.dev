@@ -3,17 +3,13 @@ import { button } from '@assets/motion'
 import reactLogo from '@assets/react.svg'
 import { useUserStore } from '@store/user'
 import { motion } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
 
 import HomeStyle from './index.module.scss'
-
 const publicPath = import.meta.env.VITE_PUBLIC_PATH
+
 function Home() {
   const { num, changeNum } = useUserStore()
-  const navigate = useNavigate()
-  const goAboutPage = () => {
-    navigate('/about')
-  }
+
 
   return (
     <div className={HomeStyle.home}>
@@ -40,8 +36,12 @@ function Home() {
           </p>
         </div>
         <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-        <motion.button {...button} onClick={goAboutPage}>
+        <motion.button {...button}>
           click to jump to the about page
+        </motion.button>
+
+        <motion.button {...button}>
+          click to jump to the Resume page
         </motion.button>
       </motion.div>
     </div>
