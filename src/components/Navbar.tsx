@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 function Navbar() {
-
-
   return (
     <nav className="navbar" role="navigation">
       <div>Bruce Graham</div>
